@@ -21,5 +21,5 @@ for x in range(2, limit+1):				# iterate back through the numbers
 	if numbers[x] == 1:					# if value is still true (i.e. prime)
 		primes.append(x)				# add the number to the list of primes
 
-for x in xrange(0, len(primes), 8):		# iterate through the list of primes in groups of 8
-	print '\t', primes[x:x+8]			# and print. enjoy your prime numbers
+for x in xrange(0, len(primes), 10):	# iterate through the list of primes in groups of ten
+	print '\t', primes[x:x+10]			# and print. enjoy your prime numbers
