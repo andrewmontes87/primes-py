@@ -3,7 +3,7 @@
 
 numbers = {}
 primes = []
-limit = 10000
+limit = 50000
 
 print "BUILDING LIST OF PRIMES UP TO LIMIT: %i" % limit
 
@@ -12,9 +12,11 @@ for x in range(2, limit+1):				# build a dictionary with numbers 2 to limit as k
 
 print "..."
 for x in range(2, limit+1):				# for every number until limit...
-	for y in range(2, limit+1-x):			# take every other number until limit...
-		if x*y<limit+1:				# if the multiple is below limit...
-			numbers[x*y] = 0   		# set the multiple's value to false (i.e. not prime)
+	if numbers[x] == 1:				# if that number is prime...
+		y = x 					# iterate through multiples, starting with square
+		while x*y<limit+1:			# while the multiple is less than limit...
+			numbers[x*y] = 0		# set the multiple's value to false (i.e. not prime)
+			y = y+1
 
 print "..."
 for x in range(2, limit+1):				# iterate back through the numbers
