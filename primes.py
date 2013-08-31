@@ -4,7 +4,7 @@
 
 ########## EDIT THE LIMIT HERE #########
 ### TRY NOT TO GO OVER A FEW MILLION ###
-limit = 1000000 ########################
+limit = 10000000 ########################
 ########################################
 
 
@@ -96,7 +96,7 @@ def print_totals(primes, twins_total, cousins_total, additive_total, limit):
 	print "\nTotal of %i additive prime numbers under %i." % (additive_total, limit)
 
 def primality_test(primes, twins, cousins, additive, limit):
-	print "\nEnter a number positive number below %i." % limit
+	print "\nEnter a positive number below %i." % limit
 	print "Enter a zero to quit."
 	number = raw_input('>>')							# accepts user input, checks if a number is prime
 	number = check_int(number)					# error-checking first
@@ -136,7 +136,7 @@ def primality_test(primes, twins, cousins, additive, limit):
 
 def check_int(number):
 	try:								# simple error-checking helper function
-		return int(number)				# i found this on stack overflow 
+		return int(number)				# found this on stack overflow 
 	except ValueError:
 		return "!"
 
